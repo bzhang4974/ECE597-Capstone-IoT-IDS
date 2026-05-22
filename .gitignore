@@ -216,3 +216,60 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================================
+# Project-specific rules for ECE597 Multi-Stage IoT IDS
+# ============================================================
+
+# Local dataset files
+# Raw CIC IoT-DIAD 2024 files should not be committed because they are large.
+data/raw/*
+data/sampled/*
+data/processed/*
+
+# Keep directory placeholders and data instructions
+!data/raw/.gitkeep
+!data/sampled/.gitkeep
+!data/processed/.gitkeep
+!data/README.md
+
+# Large model artifacts
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
+# Generated intermediate files
+*.npy
+*.npz
+*.parquet
+*.feather
+
+# Generated result files
+# We ignore generated outputs by default and selectively commit important final figures/tables if needed.
+results/figures/*
+results/tables/*
+results/metrics/*
+
+# Keep result folder placeholders and instructions
+!results/figures/.gitkeep
+!results/tables/.gitkeep
+!results/metrics/.gitkeep
+!results/README.md
+
+# Local notes or temporary files
+scratch/
+tmp/
+temp/
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional local VS Code settings
+# Uncomment this if the team does not want to share VS Code workspace settings.
+# .vscode/
