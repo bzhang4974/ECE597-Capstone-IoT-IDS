@@ -23,5 +23,4 @@ The team has not finalized the task division yet. The repository has been initia
 
 ## Notes
 
-(suggestion optional)
 Each team member can create their own branch for each major module so that individual contributions are clearly visible in the repository history.
